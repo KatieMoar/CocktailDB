@@ -1,0 +1,264 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+
+
+:root {
+  --offWhite : rgb(207, 176, 110);
+  --lightpink : rgb(229, 213, 230 );
+  --darkRed : rgb(206, 31, 78);
+  --orange : rgb(216, 129, 27);
+
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden { 
+  display: none;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+@font-face {
+  font-family: 'chicleregular';
+  src: url('../fonts/chicle-regular-webfont.woff2') format('woff2'),
+       url('../fonts/chicle-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+body {
+  margin-top: 50px;
+  text-align: center;
+  background-color: var(--offWhite);
+  background-image: url(../images/flower_background.jpg);
+  background-size: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.backgroundColour {
+  background-color: rgba(212, 174, 109, 1);
+  padding: 20px 0;
+  width: 95vw;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin: auto;
+}
+
+
+
+.drinkImage{
+  display: block;
+  width: 70%;
+}
+
+
+#getCocktailInput {
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 50%;
+  height: 40px;
+  background-color: var(--lightpink);
+  border: 0;
+  margin: 30px 5px;
+  color: rgb(86, 86, 86);
+  font-size: 2.3rem;
+  text-align: center;
+
+}
+
+#getCocktailInput:focus {
+  outline: none;
+}
+
+.getCocktailButton {
+  font-family: 'Quicksand', sans-serif;
+  height: 50px;
+  width: 35%;
+  margin: 0 5px;
+  border: 4px solid var(--orange);
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  background-color: var(--darkRed);
+  color: var(--lightpink);
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.stopButton {
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 35%;
+}
+
+h1, h2 {
+  margin: 20px auto 0 auto;
+  font-family: 'chicleregular';
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  color: var(--darkRed);
+  text-shadow: 3px 3px 3px var(--orange), 5px 5px 5px var(--orange);
+
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+#getRandomCocktail {
+  width: 50%;
+}
+
+.ingredients {
+  flex-direction: column;
+}
+
+ul {
+  width: 100%;
+  background-color: var(--offWhite);
+  font-size: 2rem;
+  font-weight: bold;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  color: rgb(86, 86, 86);
+}
+
+h3 {
+  margin: 20px auto 0 auto;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--lightpink);
+}
+
+h4{
+  font-size: 2rem;
+  color: rgb(86, 86, 86);
+  margin: 15px 30px 0 30px;
+  padding: 0;
+}
+
+footer {
+  height: 15vh;
+  background-color: var(--darkRed);
+  padding: 50px 0;
+  width: 95vw;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin: auto;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#moarLogo {
+  width: 180px;
+}
+
+
+.drinkSection {
+  flex-direction: column;
+}
+
+
+/* -------------------------------------------- */
+/*                 MEDIA QUERIES                */
+/* -------------------------------------------- */
+@media only screen and (min-width: 600px) {
+  /* FOR TABLET */
+  .getCocktailButton {
+    height: 50px;
+    width: 25%;
+}
+
+.stopButton {
+  width: 25%;
+}
+
+.drinkImage{
+  display: block;
+  width: 50%;
+}
+
+.drinkSection {
+  flex-direction: row;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* FOR DESKTOP */
+
+.backgroundColour {
+  padding: 20px 0 50px 0;
+}
+
+.getCocktailButton {
+  height: 50px;
+  width: 15%;
+}
+
+.stopButton {
+  width: 15%;
+}
+
+.drinkImage{
+  display: block;
+  width: 30%;
+  margin: 0 15px;
+}
+
+.ingredients {
+  margin: 0 15px;
+}
+
+ul {
+  text-align: left;
+}
+
+.drinkSection {
+  flex-direction: row;
+}
+
+#getCocktailInput {
+  width: 50%;
+  border: 4px solid var(--orange);
+  border-radius: 10px;
+  height: 50px;
+}
+
+#getRandomCocktail {
+  width: 50%;
+}
+  
+}
